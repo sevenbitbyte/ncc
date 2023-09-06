@@ -39,7 +39,7 @@ function ncc (
     customEmit = undefined,
     esm = entry.endsWith('.mjs') || !entry.endsWith('.cjs') && hasTypeModule(entry),
     moduleType = null,
-    moduleName = 'plugin',
+    moduleName = '',
     externals = [],
     filename = 'index' + (!esm && entry.endsWith('.cjs') ? '.cjs' : esm && (entry.endsWith('.mjs') || !hasTypeModule(entry)) ? '.mjs' : '.js'),
     minify = false,
