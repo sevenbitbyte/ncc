@@ -38,6 +38,7 @@ function ncc (
     cache,
     customEmit = undefined,
     esm = entry.endsWith('.mjs') || !entry.endsWith('.cjs') && hasTypeModule(entry),
+    moduleType = null,
     externals = [],
     filename = 'index' + (!esm && entry.endsWith('.cjs') ? '.cjs' : esm && (entry.endsWith('.mjs') || !hasTypeModule(entry)) ? '.mjs' : '.js'),
     minify = false,
@@ -292,7 +293,7 @@ function ncc (
       path: "/",
       // Webpack only emits sourcemaps for files ending in .js
       filename: ext === '.cjs' ? filename + '.js' : filename,
-      libraryTarget: esm ? 'module' : 'commonjs2',
+      libraryTarget: esm ? 'module' : (moduleType==null ? 'commonjs2' : moduleType),
       strictModuleExceptionHandling: true,
       module: esm
     },

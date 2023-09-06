@@ -1,8 +1,8 @@
 {
-  "name": "@vercel/ncc",
+  "name": "@sevenbitbyte/ncc",
   "description": "Simple CLI for compiling a Node.js module into a single file, together with all its dependencies, gcc-style.",
   "version": "0.0.0-development",
-  "repository": "vercel/ncc",
+  "repository": "sevenbitbyte/ncc",
   "license": "MIT",
   "main": "./dist/ncc/index.js",
   "bin": {
